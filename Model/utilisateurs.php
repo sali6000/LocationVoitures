@@ -3,6 +3,7 @@ class Utilisateurs extends Model{
 	var $table = "utilisateurs";	
 	var $id;
 	var $PK = "utilisateur";
-	var $data ;
+	var $actif;
+	var $data;
 }
 ?>

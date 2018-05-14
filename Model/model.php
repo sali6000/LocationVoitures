@@ -6,7 +6,7 @@ class Model{
 	function __construct() {
 		
 		try {
-		  $dns = 'mysql:host=127.0.0.1;dbname=test';
+		  $dns = 'mysql:host=127.0.0.1;dbname=locavoitures';
 		  $utilisateur = "root";
 		  $motDePasse = '';
 		 
