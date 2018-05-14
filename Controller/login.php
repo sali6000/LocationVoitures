@@ -1,6 +1,7 @@
 <?php
 require 'core.php';
 require 'Utilitaires.php';
+$Montitle = 'Se connecter';
 
     if (isset($_POST['Pseudo']) && isset($_POST['MDP']))
     {
