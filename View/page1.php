@@ -6,8 +6,8 @@
 			</header>	
 		</div>
 	</div>
+	
 	<div class="container">
-		
 		<div class="row">
 			<section class="col-lg-10">
 				<div class="row">

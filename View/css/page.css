@@ -20,6 +20,11 @@ h2{
 	text-align: center;
 	background-color: rgb(34, 116, 172);
 }
+
+.form-center{
+	text-align: center;
+	width: 20%;
+}
 .visible {
   visibility: visible;
 }
