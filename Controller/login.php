@@ -9,7 +9,8 @@ $Montitle = 'Se connecter';
             {
                 $_SESSION['UTILISATEUR_OK'] = true;
                 require '../view/haut.php';
-                echo 'Bonjour '.$_POST['Pseudo'].', vous êtes à présent connecté !</br>';
+                header('refresh:2;url=../controller/page1.php');
+                echo '<br><h3 class="alert alert-succes" align="center">Bonjour '.$_POST['Pseudo'].' ! Vous allez être redirigé...</h1></br>';
             }
             else
             {
