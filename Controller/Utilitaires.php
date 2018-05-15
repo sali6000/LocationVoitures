@@ -6,9 +6,10 @@ class Utilitaires
 		$utilisateurs=Model::load("utilisateurs");
 		$utilisateurs->id=$pseudo;
 		$utilisateurs->read();
-		if($utilisateurs->data[0]->code==$motDePasse)
+
+		if(is_null($utilisateurs->data))
 		{
-			if($utilisateurs->data[0]->actif == 1)
+			if($utilisateurs->data[0]->code==$motDePasse && $utilisateurs->data[0]->actif == 1)
 			{
 				return true;
 			}
