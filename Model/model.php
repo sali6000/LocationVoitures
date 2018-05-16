@@ -22,7 +22,7 @@ class Model{
 		  die();
 		}
 	}
-	
+
 	public function read($fields=null){
 		
 		if($fields==null)
@@ -50,14 +50,12 @@ class Model{
 		} catch ( Exception $e ) {
 		  echo 'Une erreur est survenue lors de la récupération des créateurs';
 		}
-		
 	}
+	
 	static function load($name){
 		require ('../model/'.$name.'.php');
 		return new $name();
 	}
-	
-
 }
 ?>
 

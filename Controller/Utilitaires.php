@@ -7,21 +7,9 @@ class Utilitaires
 		$utilisateurs->id=$pseudo;
 		$utilisateurs->read();
 
-		if(!empty($utilisateurs->data))
-		{
-			if($utilisateurs->data[0]->code==$motDePasse && $utilisateurs->data[0]->actif == 1)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
+		return (!empty($utilisateurs->data)) 
+		&& ($utilisateurs->data[0]->code==$motDePasse) 
+		&& ($utilisateurs->data[0]->actif == 1);
 	}
 }
 ?>

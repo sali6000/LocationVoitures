@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 </head>
-<body>
+<body class="text-center">
 	<nav class="navbar navbar-inverse" id="haut">
 		<div class="container-fluid">
 			<div class="navbar-header">

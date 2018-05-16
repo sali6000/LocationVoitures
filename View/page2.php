@@ -5,6 +5,7 @@
 		<th>Prenom</th>
 		<th>Admin</th>
 		<th>Actif</th>
+		<th>Action</th>
 
 	</tr>
 	<?php
@@ -16,7 +17,8 @@
 			<td>'.$k->prenom.'</td>
 			<td>'.$k->admin.'</td>
 			<td>'.$k->actif.'</td>
-		</tr>';
+			<td><form id="bouton" name="bouton" method="post" action="#">
+  				<button class="btn btn-dark" type="submit" name="id" id="bouton" value="'.$k->utilisateur.'">Voir le profil</button></form></td>';
 	}
 	?>
 </table>
