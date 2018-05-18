@@ -15,8 +15,8 @@
 				<td>'.$k->getUtilisateur().'</td>
 				<td>'.$k->getNom().'</td>
 				<td>'.$k->getPrenom().'</td>
-				<td>'.$k->getAdmin().'</td>
-				<td>'.$k->getActif().'</td>
+				<td>'.$admin = (($k->getAdmin()>0) ? "Oui" : "Non").'</td>
+				<td>'.$actif = (($k->getActif()>0) ? "Oui" : "Non").'</td>
 				<td>
 					<form id="bouton" name="bouton" method="post" action="#">
   						<button class="btn btn-dark" type="submit" name="readId" id="bouton" value="'.$k->getUtilisateur().'">Voir le profil

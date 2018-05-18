@@ -25,17 +25,13 @@
         	</div>
  
   			<div class="form-group">
-  		    	<label class="form-check-label">Admin: <?= ($membre->getAdmin() > 0) ? "Actif" : "Inactif"?></label>
-    			<button class="btn btn-dark" type="submit" name="setUpdateAdmin" value="<?=
-
-    			($membre->getAdmin() > 0) ? 0 : 1
-
-    			?>">Activer/Desactiver
+  		    	<label class="form-check-label">Admin: <?= ($membre->getAdmin() > 0) ? "Oui" : "Non"?></label>
+    			<button class="btn btn-dark" type="submit" name="setUpdateAdmin" value="<?= ($membre->getAdmin() > 0) ? 0 : 1 ?>">Activer/Desactiver
   				</button><br>
   			</div>
  
   			<div class="form-group">
-  		    	<label class="form-check-label">Activité: <?= ($membre->getActif() > 0) ? "Actif" : "Inactif"?></label>
+  		    	<label class="form-check-label">Activité: <?= ($membre->getActif() > 0) ? "Oui" : "Non"?></label>
     			<button class="btn btn-dark" type="submit" name="setUpdateActif">Activer/Desactiver
   				</button><br>
   			</div>
