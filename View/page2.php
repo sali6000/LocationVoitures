@@ -21,8 +21,9 @@
 					<form id="bouton" name="bouton" method="post" action="#">
   						<button class="btn btn-dark" type="submit" name="readId" id="bouton" value="'.$k->getUtilisateur().'">Voir le profil
   						</button>
-  						<button class="btn btn-dark" type="submit" name="updateId" id="bouton" value="'.$k->getUtilisateur().'">Modifier le profil
+  						<button class="btn btn-dark" type="submit" name="getUpdateId" id="bouton" value="'.$k->getUtilisateur().'">Modifier le profil
   						</button>
   					</form>
-  				</td><td><td></tr>';}?>
+  				</td>
+  				<td><td></tr>';}?>
 </table>

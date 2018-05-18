@@ -7,7 +7,7 @@
 	if(isset($_POST['readId']))
 	{
 		// On modifie le titre du site
-		$Montitle = "Profil de: ".$_POST['readId'];
+		$Montitle = "Lecture du profil de: ".$_POST['readId'];
 		// On actualise le haut du site
 		require '../view/haut.php';
 		require ('../model/membre.php');
@@ -18,13 +18,40 @@
 		// On affiche la vue page2Detail.php avec les détails concernant l'objet
 		require '../view/page2Detail.php';
 	}
-	else if(isset($_POST['updateId']))
+	else if(isset($_POST['getUpdateId']))
 	{
-		
+		// On modifie le titre du site
+		$Montitle = "Modification du profil de : ".$_POST['getUpdateId'];
+		// On actualise le haut du site
+		require '../view/haut.php';
+		require ('../model/membre.php');
+		// On passe le model à la vue
+		require ('../model/utilisateurs.php');
+		// On crée l'objet utilisateur sur base du model et on lui donne les données de la DB
+		$membre = MemberGetById($_POST['getUpdateId']); // (return new utilisateur(); avec les infos)
+		// On affiche la vue page2Detail.php avec les détails concernant l'objet
+		require '../view/page2Update.php';
+	}
+	else if(isset($_POST['setUpdateAdmin']) || isset($_POST['setUpdateActif']))
+	{
+		require ('../model/membre.php');
+		// On passe le model à la vue
+		require ('../model/utilisateurs.php');
+
+		if(!empty($_POST['setUpdateAdmin']))
+		{
+			$membre = MemberGetById($_POST['utilisateurValue']);
+			$membre->setAdmin($_POST['setUpdateAdmin']);
+		}
+		else
+		{
+			$membre = MemberGetById($_POST['utilisateurValue']);
+			$membre->setActif($_POST['setUpdateActif']);
+		}
 	}
 	else
 	{
-		$Montitle = 'Membres';
+		$Montitle = 'Lecture des membres';
 		require '../view/haut.php' ;
 		require ('../model/membre.php');
 		require ('../model/utilisateurs.php');
