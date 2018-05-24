@@ -2,14 +2,16 @@
 class Membre
 {
   private $_utilisateur;
+  private $_motDePasse;
   private $_nom;
   private $_prenom;
   private $_admin;
   private $_actif;
 
-  public function __construct($utilisateur,$nom,$prenom,$admin,$actif)
+  public function __construct($utilisateur,$motDePasse,$nom,$prenom,$admin,$actif)
   {
     $this->_utilisateur=$utilisateur;
+    $this->_motDePasse=$motDePasse;
     $this->_nom=$nom;
     $this->_prenom=$prenom;
     $this->_admin=$admin;
@@ -22,6 +24,14 @@ class Membre
   public function GetUtilisateur()
   {
     return $this->_utilisateur;
+  }
+  public function SetMotDePasse($motDePasse)
+  {
+    $this->_motDePasse = $motDePasse;
+  }
+  public function GetMotDePasse()
+  {
+    return $this->_motDePasse;
   }
   public function SetNom($nom)
   {

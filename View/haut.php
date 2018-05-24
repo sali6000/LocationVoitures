@@ -17,7 +17,7 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="../controller/Page1.php">Voitures</a></li>
-				<li><a href="../controller/Page2.php">Membres</a></li>
+				<li><a href="../controller/member.php">Membres</a></li>
 				<?php 
 					if(isset($_SESSION['UTILISATEUR_OK']) != null)
 					{

@@ -1,6 +1,7 @@
 <?php
 class Utilitaires
 {
+
 	public static function Authentification($pseudo,$motDePasse)
 	{
 		$utilisateurs=Model::load("utilisateurs");

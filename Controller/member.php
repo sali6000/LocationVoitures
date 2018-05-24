@@ -3,65 +3,65 @@
 	// Options requises :
 	require 'core.php';
 
-	// Controller CRUD
+	// READ MEMBER BY ID
 	if(isset($_POST['readId']))
 	{
 		// On modifie le titre du site
 		$Montitle = "Lecture du profil de: ".$_POST['readId'];
 		// On actualise le haut du site
 		require '../view/haut.php';
-		require ('../model/membre.php');
+		require ('../model/member.php');
 		// On passe le model à la vue
 		require ('../model/utilisateurs.php');
 		// On crée l'objet utilisateur sur base du model et on lui donne les données de la DB
 		$membre = MemberGetById($_POST['readId']); // (return new utilisateur(); avec les infos)
 		// On affiche la vue page2Detail.php avec les détails concernant l'objet
-		require '../view/page2Detail.php';
+		require '../view/memberDetail.php';
+		require '../view/bas.php';
 	}
+	// UPDATE MEMBER (GETTER BY ID)
 	else if(isset($_POST['getUpdateId']))
 	{
 		// On modifie le titre du site
 		$Montitle = "Modification du profil de : ".$_POST['getUpdateId'];
 		// On actualise le haut du site
 		require '../view/haut.php';
-		require ('../model/membre.php');
+		require ('../model/member.php');
 		// On passe le model à la vue
 		require ('../model/utilisateurs.php');
 		// On crée l'objet utilisateur sur base du model et on lui donne les données de la DB
 		$membre = MemberGetById($_POST['getUpdateId']); // (return new utilisateur(); avec les infos)
 		// On affiche la vue page2Detail.php avec les détails concernant l'objet
-		require '../view/page2Update.php';
+		require '../view/memberUpdate.php';
+		require '../view/bas.php';
 	}
-	else if(isset($_POST['setUpdateAdmin']) || isset($_POST['setUpdateActif']))
+	// UPDATE MEMBER (SETTER)
+	else if(isset($_POST['utilisateur']) && isset($_POST['nom']) && isset($_POST['prenom']))
 	{
-		require ('../model/membre.php');
-		// On passe le model à la vue
-		require ('../model/utilisateurs.php');
-
-		if(!empty($_POST['setUpdateAdmin']))
-		{
-			$membre = MemberGetById($_POST['utilisateurValue']);
-			$membre->setAdmin($_POST['setUpdateAdmin']);
-		}
-		else
-		{
-			$membre = MemberGetById($_POST['utilisateurValue']);
-			$membre->setActif($_POST['setUpdateActif']);
-		}
+		$test = new model();
+		$test->callStockProcedure(
+			$_POST['utilisateur'], 
+			$_POST['password'], 
+			$_POST['nom'], 
+			$_POST['prenom'], 
+			$adminInt = ($_POST['admin'] == "Oui")? 1 : 0, 
+			$actifInt = ($_POST['actif'] == "Oui")? 1 : 0);
+		echo 'Success';
 	}
+	// READ MEMBERS
 	else
 	{
 		$Montitle = 'Lecture des membres';
 		require '../view/haut.php' ;
-		require ('../model/membre.php');
+		require ('../model/member.php');
 		require ('../model/utilisateurs.php');
 		// On affiche les membres
 		$membres = MemberGetList();
-		require '../view/page2.php';
+		require '../view/memberList.php';
+		require '../view/bas.php';
 	}
-	// Bas de page
-    require '../view/bas.php';
 
+	// FUNCTION GET MEMBER BY ID
     function MemberGetById($id)
     {
 		// On ouvre la connection à la base de donnée, 
@@ -77,6 +77,7 @@
 		$userDatas->read();
 		$userObject = new Membre(
 			$userDatas->data[0]->utilisateur,
+			$userDatas->data[0]->code,
 			$userDatas->data[0]->nom,
 			$userDatas->data[0]->prenom,
 			$userDatas->data[0]->admin,
@@ -86,24 +87,26 @@
 		return $userObject;
     }
 
-    // Retourne une liste d'objets Membre
+    // FUNCTION GET LIST MEMBERS
     function MemberGetList()
     {
+
     	$members = new utilisateurs();
+
     	// On récupère toute les informations concernant tous les utilisateurs dans la base de donnée
 		$members->read();
 
-		// On créer une List vide
+		// On crée une List vide
 		$userObjectList = [];
 
 		// On parcours la List à l'aide d'un compteur pour y ajouté des Membre
 		$j = 0;
 		foreach($members->data as $d)
 		{
-			$userObjectList[$j] = new Membre($d->utilisateur,$d->nom,$d->prenom,$d->admin,$d->actif);
+			$userObjectList[$j] = new Membre($d->utilisateur,$d->code,$d->nom,$d->prenom,$d->admin,$d->actif);
 			$j = $j+1;
 		} 
 
-		// On retourne la List de Membre
+		// On retourne la List de Membres
 		return $userObjectList;
     }

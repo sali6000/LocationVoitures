@@ -9,3 +9,6 @@
 		<dt>Actif:</dt><dd><?= $actif = (($membre->getActif()>0) ? "Oui" : "Non")?></dd>
 		<dt></dt><dd></dd>
 	</dl>
+	<form id="bouton" name="bouton" method="post" action="#">
+		<button class="btn btn-dark" type="submit" name="getUpdateId" id="bouton" value="<?= $membre->getUtilisateur()?>">Modifier le profil</button>
+	</form>
