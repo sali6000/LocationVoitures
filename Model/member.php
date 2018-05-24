@@ -1,5 +1,5 @@
 <?php
-class Membre
+class Member
 {
   private $_utilisateur;
   private $_motDePasse;

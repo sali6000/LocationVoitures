@@ -75,7 +75,7 @@
 		// On récupère toute les informations concernant l'id  dans la base de donnée
 		// et on insère le contenu récupéré dans l'objet $userObject
 		$userDatas->read();
-		$userObject = new Membre(
+		$userObject = new Member(
 			$userDatas->data[0]->utilisateur,
 			$userDatas->data[0]->code,
 			$userDatas->data[0]->nom,
@@ -103,7 +103,7 @@
 		$j = 0;
 		foreach($members->data as $d)
 		{
-			$userObjectList[$j] = new Membre($d->utilisateur,$d->code,$d->nom,$d->prenom,$d->admin,$d->actif);
+			$userObjectList[$j] = new Member($d->utilisateur,$d->code,$d->nom,$d->prenom,$d->admin,$d->actif);
 			$j = $j+1;
 		} 
 
