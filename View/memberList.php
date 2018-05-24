@@ -31,6 +31,6 @@
   						</button>
   					</form>
   				</td>
-  				<td><td></tr>';}?>
+  				<td></td></tr>';}?>
 </table>
 <script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>

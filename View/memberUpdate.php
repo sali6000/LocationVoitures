@@ -5,7 +5,7 @@
 
       <!-- DEBUT DE FORMULAIRE -->
 
-      <!-- AFICHAGE DU RESULTAT DU SUCCES DU FORMULAIRE EN JQUERY -->
+      <!-- AFICHAGE DU RESULTAT DE LA REQUETE JQUERY -->
       <p id="resultat"></p>
 
       <!-- PSEUDO -->
@@ -63,7 +63,6 @@
         <div class="btn btn-lg btn-primary btn-block" id="submit" value="Valider" />Sauvegarder le changement</div>
 
         <!-- FIN DE FORMULAIRE -->
-
       </form>
     </div>
 <script src="../view/script/updateMember.js" type="text/javascript" charset="utf-8" async defer></script>
