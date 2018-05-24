@@ -1,3 +1,4 @@
+/* Modifications divers par dessus bootstrap */
 body{
 	font-family: Arial,Helvetica,sans-serif;
 }
@@ -30,4 +31,26 @@ h2{
 }
 .invisible {
   visibility: hidden;
+}
+.h50
+{
+	text-align: left;
+	position: absolute;
+	left: auto;
+	width: 200px;
+	display: none;
+}
+#myInputUser, #myInputFirstname, #myInputName 
+{
+	left:auto;
+    width: 50%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px; /* Add some padding */
+    border: 2px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+.text-center
+{
+	text-align: left;
 }

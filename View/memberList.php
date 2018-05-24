@@ -1,4 +1,10 @@
-<table class="table">
+<div align="center">
+<div style="float:left">Rechercher par utilisateur:  <input type="text" id="myInputUser" onkeyup="searchUser(0,'myInputUser')" placeholder="Ex: DarkMan"></div>
+<div style="float:left">Rechercher par nom:  <input type="text" id="myInputName" onkeyup="searchUser(1,'myInputName')" placeholder="Ex: Jhon"></div>
+<div style="float:left;">Rechercher par prénom:  <input type="text" id="myInputFirstname" onkeyup="searchUser(2,'myInputFirstname')" placeholder="Ex: Vandenborre"></div>
+</div>
+
+<table class="table" id="myTable">
 	<tr>
 		<th>Utilisateur</th>
 		<th>Nom</th>
@@ -27,3 +33,4 @@
   				</td>
   				<td><td></tr>';}?>
 </table>
+<script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>

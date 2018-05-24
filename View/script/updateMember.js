@@ -41,7 +41,7 @@ $(document).ready(function()
 });
 
 
-// Fonction JVS pour changer l'état d'une value dans un input (paragraphes, etc... exclus)
+// Fonction JVS pour changer l'état d'une valeur dans un input (paragraphes, etc... exclus)
 function updateStatut(valuePhp = 'null', idElement = null) 
 {
 	var temp = valuePhp == "Oui" ? "Non" : "Oui";
