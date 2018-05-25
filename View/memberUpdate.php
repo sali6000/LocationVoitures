@@ -12,7 +12,7 @@
 			<div class="form-group">
 			<label class="form-check-label">Pseudo : </label>
             <div class="col-md-12">
-                <input id="isUtilisateur" class="form-control" type="text" value="<?= $membre->getUtilisateur() ?>" name="utilisateurValue" required="" maxlength="20" /><br>
+                <input id="isUtilisateur" class="form-control" type="text" value="<?= $membre->getUtilisateur() ?>" name="utilisateurValue" required="" maxlength="20" readonly/><br>
             </div>
         	</div>
 
