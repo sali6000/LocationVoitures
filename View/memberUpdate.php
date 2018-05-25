@@ -1,5 +1,5 @@
 <div class="container-fluid" align="center">
-        <h4>Member Update</h4>
+        <h4>Modification du profil de <?=$_POST['getUpdateId']?></h4>
         <hr />
 		<form class="form-signin form-center" action="../controller/page2test.php" method="post">
 
