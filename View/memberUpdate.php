@@ -10,7 +10,7 @@
 
       <!-- PSEUDO -->
 			<div class="form-group">
-			<label class="form-check-label">Pseudo: </label>
+			<label class="form-check-label">Pseudo : </label>
             <div class="col-md-12">
                 <input id="isUtilisateur" class="form-control" type="text" value="<?= $membre->getUtilisateur() ?>" name="utilisateurValue" required="" maxlength="20" /><br>
             </div>
@@ -18,7 +18,7 @@
 
           <!-- MOT DE PASSE -->
           <div class="form-group">
-              <label class="form-check-label">Mot de passe: </label>
+              <label class="form-check-label">Mot de passe : </label>
               <div class="col-md-12">
                   <input id="isPassword" class="form-control" type="password" value="<?= $membre->getMotDePasse() ?>" required="" maxlength="20" /><br>
               </div>
@@ -26,7 +26,7 @@
 
           <!-- PRENOM -->
         	<div class="form-group">
-            <label class="form-check-label">Prenom: </label>
+            <label class="form-check-label">Prénom : </label>
             <div class="col-md-12">
               <input id="isPrenom" class="form-control" type="text" value="<?= $membre->getPrenom() ?>" name="prenomValue" required="" maxlength="20" /><br>
             </div>
@@ -34,7 +34,7 @@
 
           <!-- NOM -->
         	<div class="form-group">
-        	  	<label class="form-check-label">Nom: </label>
+        	  	<label class="form-check-label">Nom : </label>
             	<div class="col-md-12">
                 	<input id="isNom" class="form-control" type="text" value="<?= $membre->getNom() ?>" name="nomValue" required="" maxlength="20" /><br>
             	</div>
@@ -42,7 +42,7 @@
 
         <!-- ADMIN -->
   			<div class="form-group">
-          <label class="form-check-label">Admin: </label>
+          <label class="form-check-label">Admin : </label>
           <input id="isAdmin" value="<?= $isAdmin = ($membre->getAdmin() > 0) ? "Oui" : "Non" ?>" readonly></input>
           <button type="button" class="btn btn-primary" onclick="updateStatut('<?php echo $isAdmin; ?>', 'isAdmin')">
             Activer/Désactiver
@@ -52,7 +52,7 @@
 
         <!-- ACTIF -->
   			<div class="form-group">
-          <label class="form-check-label">Actif: </label>
+          <label class="form-check-label">Actif : </label>
   		    <input id="isActif" value="<?= $isActif = ($membre->getActif() > 0) ? "Oui" : "Non" ?>" readonly></input>
           <button type="button" id="button" class="btn btn-primary" onclick="updateStatut('<?php echo $isActif; ?>', 'isActif')">
             Activer/Désactiver

@@ -1,7 +1,7 @@
 <div align="center">
-<div style="float:left">Rechercher par utilisateur:  <input type="text" id="myInputUser" onkeyup="searchUser(0,'myInputUser')" placeholder="Ex: DarkMan"></div>
-<div style="float:left">Rechercher par nom:  <input type="text" id="myInputName" onkeyup="searchUser(1,'myInputName')" placeholder="Ex: Jhon"></div>
-<div style="float:left;">Rechercher par prénom:  <input type="text" id="myInputFirstname" onkeyup="searchUser(2,'myInputFirstname')" placeholder="Ex: Vandenborre"></div>
+<div style="float:left">Rechercher par <b>pseudo</b> :  <input type="text" id="myInputUser" onkeyup="searchUser(0,'myInputUser')" placeholder="Ex: DarkMan"></div>
+<div style="float:left">Rechercher par <b>nom</b> :  <input type="text" id="myInputName" onkeyup="searchUser(1,'myInputName')" placeholder="Ex: Jhon"></div>
+<div style="float:left;">Rechercher par <b>prénom</b> :  <input type="text" id="myInputFirstname" onkeyup="searchUser(2,'myInputFirstname')" placeholder="Ex: Vandenborre"></div>
 </div>
 
 <table class="table" id="myTable">
