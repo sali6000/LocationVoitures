@@ -1,3 +1,8 @@
+// Cette méthode jquery permet de traité les informations de façons synchronisée (AJAX)
+// C'est à dire qu'il n'y a pas de rechargement de page lorsque je souhaite accéder au serveur
+//
+// Autrement dit, cette méthode jquery permet de faire de l'ajax et donc de ne pas avoir à 
+// rafraichir la page sur laquel je souhaite effectuer un changement depuis le serveur
 $(document).ready(function()
 {
     $("#submit").click(function(event)
@@ -10,11 +15,11 @@ $(document).ready(function()
         var actif = $("#isActif").val();
 
         event.preventDefault();
-        // POST contien en paramètre (la destination, les valeurs et une méthode)
+        // POST contient en paramètre (la destination, les attributs et une méthode de retour)
         $.post(
             '#', // La destination du POST
             {
-                // Nous récupérons les datas dans la destination du POST
+                // Nous récupérons les attributs dans la destination du POST
                 utilisateur : utilisateur,
                 password : password,
                 nom : nom,
