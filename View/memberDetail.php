@@ -7,8 +7,13 @@
 		<dt>Nom:</dt><dd><?= $membre->getNom()?></dd>
 		<dt>Admin:</dt><dd><?= $admin = (($membre->getAdmin()>0) ? "Oui" : "Non")?></dd>
 		<dt>Actif:</dt><dd><?= $actif = (($membre->getActif()>0) ? "Oui" : "Non")?></dd>
-		<dt></dt><dd></dd>
+			<?php
+			require 'Utilitaires.php';
+
+			if($_SESSION['UTILISATEUR_OK'] > 0)
+			{
+				echo '<dt>Action:</dt><dd><form id="bouton" name="bouton" method="post" action="#">
+				<button class="btn btn-dark" type="submit" name="getUpdateId" id="bouton" value="'.$membre->getUtilisateur().'">Modifier le profil</button></form></dd>';
+			}
+			?>
 	</dl>
-	<form id="bouton" name="bouton" method="post" action="#">
-		<button class="btn btn-dark" type="submit" name="getUpdateId" id="bouton" value="<?= $membre->getUtilisateur()?>">Modifier le profil</button>
-	</form>

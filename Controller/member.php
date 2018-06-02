@@ -3,6 +3,8 @@
 	// Options requises :
 	require 'core.php';
 
+	// --------------------------- CONTROLLER (IF) -------------------------- //
+
 	// READ MEMBER BY ID
 	if(isset($_POST['readId']))
 	{
@@ -60,6 +62,8 @@
 		require '../view/memberList.php';
 		require '../view/bas.php';
 	}
+
+	// -------------------------- METHODES ---------------------------//
 
 	// FUNCTION GET MEMBER BY ID
     function MemberGetById($id)

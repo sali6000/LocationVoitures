@@ -7,6 +7,14 @@ $(document).ready(function()
 {
     $("#submit").click(function(event)
     {
+        // Assigner les valeurs des attributs provenant d'un formulaire PHP dans des variables JVS 
+        // dans ce cas çi est nécessaire car nous sommes dans du JVS.
+        //
+        // (La méthode POST permet de ne pas afficher les valeurs dans le protocole HTTP (URL))
+        //
+        // Les attributs venant d'une méthode POST en PHP doivent donc obligatoirement être assignées
+        // dans des variables JVS contrairement à la méthode GET qui permet à du javascript 
+        // de récupérer directement les valeurs provenant d'un formulaire PHP.
         var utilisateur = $("#isUtilisateur").val();
         var password = $("#isPassword").val();
         var nom = $("#isNom").val();
@@ -15,11 +23,13 @@ $(document).ready(function()
         var actif = $("#isActif").val();
 
         event.preventDefault();
+
         // POST contient en paramètre (la destination, les attributs et une méthode de retour)
         $.post(
             '#', // La destination du POST
             {
-                // Nous récupérons les attributs dans la destination du POST
+                // Nous créons les attributs; ex: $_POST('utilisateur') avec les valeurs
+                // qu'ils doivent contenir 
                 utilisateur : utilisateur,
                 password : password,
                 nom : nom,
@@ -31,13 +41,13 @@ $(document).ready(function()
             {
                 if(data == 'Success')
                 {
-                     // Résultat réussir
+                     // Résultat réussi
                      $("#resultat").html("<br><div class=\"alert alert-success\" align=\"center\"> Le changement a bien été effectué !</div>");
                 }
                 else
                 {
-                     // Résultat faux
-                     $("#resultat").html("<br><div class=\"alert alert-danger\" align=\"center\"> Le changement n'a bien été effectué !</div>");
+                     // Résultat échoué
+                     $("#resultat").html("<br><div class=\"alert alert-danger\" align=\"center\"> Le changement n'a pas bien été effectué !</div>");
                 }
             },
             'text'

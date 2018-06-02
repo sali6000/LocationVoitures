@@ -69,7 +69,7 @@ class Model{
 		}
 	}
 	
-	// Cette fonction permet de renvoyé une vue avec un model
+	// Cette fonction permet de renvoyé une vue avec le model associé
 	static function load($name)
 	{
 		// Affiche un accès à un model dans dans le controller 
