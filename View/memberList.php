@@ -1,7 +1,5 @@
 <div align="center">
-<div style="float:left">Rechercher par <b>pseudo</b> :  <input type="text" id="myInputUser" onkeyup="searchUser(0,'myInputUser')" placeholder="Ex: DarkMan"></div>
-<div style="float:left">Rechercher par <b>nom</b> :  <input type="text" id="myInputName" onkeyup="searchUser(1,'myInputName')" placeholder="Ex: Jhon"></div>
-<div style="float:left;">Rechercher par <b>prénom</b> :  <input type="text" id="myInputFirstname" onkeyup="searchUser(2,'myInputFirstname')" placeholder="Ex: Vandenborre"></div>
+	<div><b>Effectuer une recherche : </b><input type="text" id="myInput" onkeyup="searchUser('myInput','myTable')" placeholder="Ex: ChuckNorris"></div>
 </div>
 
 <table class="table" id="myTable">
@@ -18,17 +16,17 @@
 	foreach($membres as $k)
 	{
 		echo '<tr>
-				<td>'.$k->getUtilisateur().'</td>
-				<td>'.$k->getNom().'</td>
-				<td>'.$k->getPrenom().'</td>
-				<td>'.$admin = (($k->getAdmin()>0) ? "Oui" : "Non").'</td>
-				<td>'.$actif = (($k->getActif()>0) ? "Oui" : "Non").'</td>
-				<td>
-					<form id="bouton" name="bouton" method="post" action="">
-  						<button class="btn btn-dark" type="submit" name="readId" id="bouton" value="'.$k->getUtilisateur().'">Voir le profil
-  						</button>
-  					</form>
-  				</td>
-  				<td></td></tr>';}?>
-</table>
-<script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>
+		<td>'.$k->getUtilisateur().'</td>
+		<td>'.$k->getNom().'</td>
+		<td>'.$k->getPrenom().'</td>
+		<td>'.$admin = (($k->getAdmin()>0) ? "Oui" : "Non").'</td>
+		<td>'.$actif = (($k->getActif()>0) ? "Oui" : "Non").'</td>
+		<td>
+		<form id="bouton" name="bouton" method="post" action="">
+		<button class="btn btn-primary" type="submit" name="readId" id="bouton" value="'.$k->getUtilisateur().'">Voir le profil
+		</button>
+		</form>
+		</td>
+		<td></td></tr>';}?>
+	</table>
+	<script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>

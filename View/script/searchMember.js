@@ -1,27 +1,44 @@
-function searchUser(colonne, baliseId) 
+function searchUser(inputId, tableId)
 {
 
   // Declaration des variables
   var input, filter, table, tr, td, i;
-  input = document.getElementById(baliseId);
+
+
+  //input = Elena
+  input = document.getElementById(inputId);
+
+  // filtre = ELENA
   filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
+
+  // table = myTable
+  table = document.getElementById(tableId);
+
+  // tr = tr (lignes) in myTable
   tr = table.getElementsByTagName("tr");
 
-  // Analyse toutes les lignes et cache toutes celles qui ne correspondent pas au critère de recherche
-  for(i = 0; i < tr.length; i++) 
-  {
-    td = tr[i].getElementsByTagName("td")[colonne];
+  tdLengt = table.getElementsByTagName("td");
 
-    if(td) 
+  // Analyse toutes les lignes et cache toutes celles qui ne correspondent pas au critère de recherche
+  for(i = 0; i < tr.length; i++)
+  {
+    var find = false;
+    for(j = 0; j < 4; j++)
     {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) 
+
+      td = tr[i].getElementsByTagName("td")[j];
+
+      if(td)
       {
-        tr[i].style.display = "";
-      } 
-      else 
-      {
-        tr[i].style.display = "none";
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1)
+        {
+          tr[i].style.display = "";
+          find = true;
+        }
+        else if(find == false)
+        {
+          tr[i].style.display = "none";
+        }
       }
     }
   }
