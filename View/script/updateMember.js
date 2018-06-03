@@ -42,12 +42,12 @@ $(document).ready(function()
                 if(data == 'Success')
                 {
                      // Résultat réussi
-                     $("#resultat").html("<br><div class=\"alert alert-success\" align=\"center\"> Le changement a bien été effectué !</div>");
+                     $("#resultat").html("<br><div class=\"alert alert-success\" align=\"center\">Le changement a bien été effectué, vous allez être redirigé...</div>");
                 }
                 else
                 {
                      // Résultat échoué
-                     $("#resultat").html("<br><div class=\"alert alert-danger\" align=\"center\"> Le changement n'a pas bien été effectué !</div>");
+                     $("#resultat").html("<br><div class=\"alert alert-danger\" align=\"center\">Une erreur est survenue, vous allez être redirigé...</div>");
                 }
             },
             'text'

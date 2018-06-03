@@ -1,5 +1,16 @@
+<dt>Action:</dt><dd>
+        <button class="btn btn-dark" id="myBtn">Modifier le profil</button></dd>
+
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+
+
 <div class="container-fluid" align="center">
-        <h4>Modification du profil de <?=$_POST['getUpdateId']?></h4>
+        <h4>Modifier le profil</h4>
         <hr />
 		<form class="form-signin form-center" action="../controller/page2test.php" method="post">
 
@@ -65,4 +76,9 @@
         <!-- FIN DE FORMULAIRE -->
       </form>
     </div>
+    </div>
+
+        </div>
+<script src="../view/script/showModal.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="../view/script/updateMember.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="../view/script/redirection.js" type="text/javascript" charset="utf-8" async defer></script>

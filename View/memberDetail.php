@@ -12,8 +12,8 @@
 
 			if($_SESSION['UTILISATEUR_OK'] > 0)
 			{
-				echo '<dt>Action:</dt><dd><form id="bouton" name="bouton" method="post" action="#">
-				<button class="btn btn-dark" type="submit" name="getUpdateId" id="bouton" value="'.$membre->getUtilisateur().'">Modifier le profil</button></form></dd>';
-			}
-			?>
+				include 'memberUpdate.php';
+			}?>
 	</dl>
+</div>
+<script src="../view/script/showModal.js" type="text/javascript" charset="utf-8" async defer></script>

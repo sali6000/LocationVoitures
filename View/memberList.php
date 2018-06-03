@@ -24,7 +24,7 @@
 				<td>'.$admin = (($k->getAdmin()>0) ? "Oui" : "Non").'</td>
 				<td>'.$actif = (($k->getActif()>0) ? "Oui" : "Non").'</td>
 				<td>
-					<form id="bouton" name="bouton" method="post" action="#">
+					<form id="bouton" name="bouton" method="post" action="">
   						<button class="btn btn-dark" type="submit" name="readId" id="bouton" value="'.$k->getUtilisateur().'">Voir le profil
   						</button>
   					</form>
