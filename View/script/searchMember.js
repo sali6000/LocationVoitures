@@ -4,7 +4,6 @@ function searchUser(inputId, tableId)
   // Declaration des variables
   var input, filter, table, tr, td, i;
 
-
   //input = Elena
   input = document.getElementById(inputId);
 
