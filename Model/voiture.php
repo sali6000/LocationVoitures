@@ -1,5 +1,5 @@
 <?php
-class Voitures
+class Voiture
 {
   // Variables privates
   private $_voitureID;
@@ -82,5 +82,5 @@ class Voitures
   {
     return $this->_actif;
   }
-
+}
   ?>
