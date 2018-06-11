@@ -1,6 +1,6 @@
 	<div align="center">
 		<div id="recherche">
-			  <hr />
+			<br>
 			<b>Effectuer une recherche : </b>
 			<div class="input-group">
 				<input type="text" class="form-control" id="myInput" onkeyup="searchUser('myInput','myTable')" placeholder="Ex: ChuckNorris"><div class="input-group-btn"><button class="btn btn-default" type="submit">
@@ -8,7 +8,7 @@
 				</button>
 			</div>
 		</div>
-		  <hr />
+		<br>
 	</div>
 </div>
 

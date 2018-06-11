@@ -50,7 +50,7 @@ $(document).ready(function()
                      $("#resultat").html("<br><div class=\"alert alert-danger\" align=\"center\">Une erreur est survenue, vous allez être redirigé...</div>");
                  }
              },
-             'text'
+             'text',
              );
     });
 });
