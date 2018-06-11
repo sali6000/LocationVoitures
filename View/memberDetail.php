@@ -1,5 +1,6 @@
-<div>
-  <h4>Membre</h4>
+<div id="fondBlanc">
+  <hr />
+  <h4 align="center">Modification du profil de <b><?= $membre->getUtilisateur()?></b></h4>
   <hr />
   <dl class="dl-horizontal">
    <dt>Utilisateur:</dt><dd><?= $membre->getUtilisateur()?></dd>
@@ -14,6 +15,8 @@
    {
     include 'memberUpdate.php';
   }?>
+  <hr />
 </dl>
+<hr />
 </div>
 <script src="../view/script/showModal.js" type="text/javascript" charset="utf-8" async defer></script>

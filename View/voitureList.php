@@ -4,7 +4,7 @@
 </div>
 <table class="table" id="myTable">
 	<tr>
-		
+
 		<th>Marque</th>
 		<th>Modele</th>
 		<th>Couleur</th>
@@ -23,7 +23,7 @@
 				<td>'.$k->GetCouleur().'</td>
 				<td>'.$k->GetDateLocation().'</>
 				<td>'.$k->GetDateRetour().'</>
-				
+
 
 				<td>'.$actif = (($k->getActif()>0) ? "Oui" : "Non").'</td>
 				<td>

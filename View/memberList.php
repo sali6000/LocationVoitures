@@ -1,6 +1,17 @@
-<div align="center">
-	<div><b>Effectuer une recherche : </b><input type="text" id="myInput" onkeyup="searchUser('myInput','myTable')" placeholder="Ex: ChuckNorris"></div>
+	<div align="center">
+		<div id="recherche">
+			  <hr />
+			<b>Effectuer une recherche : </b>
+			<div class="input-group">
+				<input type="text" class="form-control" id="myInput" onkeyup="searchUser('myInput','myTable')" placeholder="Ex: ChuckNorris"><div class="input-group-btn"><button class="btn btn-default" type="submit">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</div>
+		</div>
+		  <hr />
+	</div>
 </div>
+
 
 <table class="table" id="myTable">
 	<tr>
@@ -29,4 +40,5 @@
 		</td>
 		<td></td></tr>';}?>
 	</table>
+
 	<script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>

@@ -14,12 +14,71 @@ footer{
     padding: 10px;
     font-size: 70%;
     line-height: 14px;
+    background-color: white;
+    opacity: 0.9;
 }
 
 h2{
 	color:rgb(255,255,255);
 	text-align: center;
 	background-color: rgb(34, 116, 172);
+}
+
+#margins
+{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#bas
+{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#fondBlanc
+{
+    background-color: white;
+
+}
+
+#blanc
+{
+    background-color: transparent;
+    opacity: 0.8;
+}
+
+
+#haut
+{
+    opacity: 0.9;
+    border-style: none;
+}
+
+.table
+{
+    background-color: white;
+    margin-bottom: 0;
+}
+
+#recherche
+{
+    position: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    opacity:0.8;
+    color: black;
+    font-size: 20px;
+    background-color: white;
+    width: 100%;
+    margin: 2% 0;
+
+}
+
+
+.navbar{
+    margin-bottom: 0px;
 }
 
 .form-center{
@@ -32,14 +91,24 @@ h2{
 .invisible {
   visibility: hidden;
 }
+
+.form-signin
+{
+    height: 100%;
+}
+
+.input-group
+{
+    width: 20%;
+
+}
+
 #myInput
 {
 	left:auto;
-    width: 15%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     padding: 2px; /* Add some padding */
     border: 2px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
 }
 
 .text-center
@@ -89,4 +158,34 @@ h2{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#background
+{
+    background-size: auto;
+    background-image: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    height: 100%;
+}
+
+.formulairePerso
+{
+    -webkit-box-shadow: 10px 10px 25px 2px #292929;
+    box-shadow: 10px 10px 25px 2px #292929;
+    -webkit-border-radius: 20px 20px 20px 420px;
+    border-radius: 20px 20px 20px 20px;
+    width: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+    opacity: 0.9;
 }
