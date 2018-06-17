@@ -23,6 +23,7 @@
 		<th>Action</th>
 		<th></th>
 	</tr>
+
 	<?php
 	foreach($membres as $k)
 	{
@@ -38,7 +39,9 @@
 		</button>
 		</form>
 		</td>
-		<td></td></tr>';}?>
+		<td></td></tr>';
+	}
+	?>
 	</table>
 
 	<script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>
