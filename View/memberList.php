@@ -3,7 +3,7 @@
 			<br>
 			<b>Effectuer une recherche : </b>
 			<div class="input-group">
-				<input type="text" class="form-control" id="myInput" onkeyup="searchUser('myInput','myTable')" placeholder="Ex: ChuckNorris"><div class="input-group-btn"><button class="btn btn-default" type="submit">
+				<input type="text" class="form-control" id="myInput" onkeyup="searchObject('myInput','myTable')" placeholder="Ex: ChuckNorris"><div class="input-group-btn"><button class="btn btn-default" type="submit">
 					<i class="glyphicon glyphicon-search"></i>
 				</button>
 			</div>
@@ -41,4 +41,4 @@
 		<td></td></tr>';}?>
 	</table>
 
-	<script src="../view/script/searchMember.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="../view/script/searchObject.js" type="text/javascript" charset="utf-8" async defer></script>

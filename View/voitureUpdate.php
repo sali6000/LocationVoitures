@@ -1,6 +1,6 @@
 
 <dt>Action:</dt><dd>
-        <button class="btn btn-dark" id="myBtn">Modifier la voiture</button></dd>
+        <button class="btn btn-primary" id="myBtn">Modifier la voiture</button></dd>
 
 
         <div id="myModal" class="modal">

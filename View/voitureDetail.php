@@ -1,10 +1,10 @@
-<div>
-    <h4>Voiture</h4>
-    <hr />
-    <dl class="dl-horizontal">
-    	<dt>Voiture:</dt><dd><?= $Voiture->GetMarque()?></dd>
+<div id="fondBlanc">
+     <hr />
+  <h4 align="center">Voiture: <b><?= $voiture->getMarque()?></b></h4>
+  <hr />
+    <dl class="dl-horizontal">   	
 		<dt>Modele:</dt><dd><?= $voiture->GetModele()?></dd>
-		<dt>Couleur:</dt><dd><?= $couleur->GetCOuleur()?></dd>
+		<dt>Couleur:</dt><dd><?= $voiture->GetCouleur()?></dd>
 		<dt>Actif:</dt><dd><?= $actif = (($voiture->GetActif()>0) ? "Oui" : "Non")?></dd>
 			<?php
 			require 'Utilitaires.php';

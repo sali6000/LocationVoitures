@@ -80,7 +80,6 @@
 		$voitureDatas->read();
 		$voitureObject = new voiture(
 			$voitureDatas->data[0]->voitureID,
-			$voitureDatas->data[0]->code,
 			$voitureDatas->data[0]->marque,
 			$voitureDatas->data[0]->modele,
 			$voitureDatas->data[0]->couleur,
@@ -89,7 +88,7 @@
 			$voitureDatas->data[0]->actif);
 
 		// On retourne l'objet utilisateur
-		return $userObject;
+		return $voitureObject;
     }
 
     // FUNCTION GET LIST MEMBERS
