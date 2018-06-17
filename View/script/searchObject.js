@@ -1,4 +1,4 @@
-function searchUser(inputId, tableId)
+function searchObject(inputId, tableId)
 {
 
   // Declaration des variables

@@ -1,7 +1,8 @@
 
-<dt>Action:</dt><dd>
-        <button class="btn btn-dark" id="myBtn">Modifier la voiture</button></dd>
-
+<dt>Action:</dt>
+<dd>
+  <button class="btn btn-primary" id="myBtn">Modifier la voiture</button>
+</dd>
 
         <div id="myModal" class="modal">
 
@@ -13,14 +14,10 @@
 <div class="container-fluid" align="center">
         <h4>Modifier la voiture</h4>
         <hr />
-		<form class="form-signin form-center" action="../controller/page2test.php" method="post">
-
       <!-- DEBUT DE FORMULAIRE -->
-
       <!-- AFICHAGE DU RESULTAT DE LA REQUETE JQUERY -->
-      <p id="resultat"></p>
-
-    
+      <p id="resultatVoiture"></p>
+   
           <!-- MARQUE -->
         	<div class="form-group">
             <label class="form-check-label"> Marque : </label>
@@ -38,7 +35,7 @@
         	</div>
         	<!-- COULEUR -->
         	<div class="form-group">
-        	  	<label class="form-check-label">Modele : </label>
+        	  	<label class="form-check-label">Couleur : </label>
             	<div class="col-md-12">
                 	<input id="isCouleur" class="form-control" type="text" value="<?= $voiture->GetCouleur() ?>" name="couleurValue" required="" maxlength="20" /><br>
             	</div>
@@ -78,14 +75,14 @@
   			</div>
 
         <!-- VALIDATION -->
-        <div class="btn btn-lg btn-primary btn-block" id="submit" value="Valider" />Sauvegarder le changement</div>
+        <div class="btn btn-lg btn-primary btn-block" id="submitVoiture" value="Valider" />Sauvegarder le changement</div>
 
         <!-- FIN DE FORMULAIRE -->
       </form>
     </div>
     </div>
-
         </div>
+         <!-- SCRIPT JS --->
 <script src="../view/script/showModal.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="../view/script/updateVoiture.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="../view/script/redirection.js" type="text/javascript" charset="utf-8" async defer></script>
