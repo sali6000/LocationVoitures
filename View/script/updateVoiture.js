@@ -5,7 +5,7 @@
 // rafraichir la page sur laquel je souhaite effectuer un changement depuis le serveur
 $(document).ready(function()
 {
-    $("#submit").click(function(event)
+    $("#submitVoiture").click(function(event)
     {
         // Assigner les valeurs des attributs provenant d'un formulaire PHP dans des variables JVS 
         // dans ce cas çi est nécessaire car nous sommes dans du JVS.
@@ -15,7 +15,6 @@ $(document).ready(function()
         // Les attributs venant d'une méthode POST en PHP doivent donc obligatoirement être assignées
         // dans des variables JVS contrairement à la méthode GET qui permet à du javascript 
         // de récupérer directement les valeurs provenant d'un formulaire PHP.
-        var voiture = $("#isVoiture").val();
         var marque = $("#isMarque").val();
         var modele = $("#isModele").val();
         var couleur = $("#isCouleur").val();
@@ -31,7 +30,6 @@ $(document).ready(function()
             {
                 // Nous créons les attributs; ex: $_POST('utilisateur') avec les valeurs
                 // qu'ils doivent contenir 
-                voiture : voiture,
                 marque : marque,
                 modele : modele,
                 couleur : couleur,
@@ -44,12 +42,12 @@ $(document).ready(function()
                 if(data == 'Success')
                 {
                      // Résultat réussi
-                     $("#resultat").html("<br><div class=\"alert alert-success\" align=\"center\">Le changement a bien été effectué, vous allez être redirigé...</div>");
+                     $("#resultatVoiture").html("<br><div class=\"alert alert-success\" align=\"center\">Le changement a bien été effectué, vous allez être redirigé...</div>");
                 }
                 else
                 {
                      // Résultat échoué
-                     $("#resultat").html("<br><div class=\"alert alert-danger\" align=\"center\">Une erreur est survenue, vous allez être redirigé...</div>");
+                     $("#resultatVoiture").html("<br><div class=\"alert alert-danger\" align=\"center\">Une erreur est survenue, vous allez être redirigé...</div>");
                 }
             },
             'text'
