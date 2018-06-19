@@ -14,8 +14,7 @@ $(document).ready(function()
         //
         // Les attributs venant d'une méthode POST en PHP doivent donc obligatoirement être assignées
         // dans des variables JVS contrairement à la méthode GET qui permet à du javascript 
-        // de récupérer directement les valeurs provenant d'un formulaire PHP.
-        S
+        // de récupérer directement les valeurs provenant d'un formulaire PHP
         var marque = $("#isMarque").val();
         var modele = $("#isModele").val();
         var couleur = $("#isCouleur").val();
