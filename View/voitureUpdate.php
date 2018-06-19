@@ -1,4 +1,3 @@
-
 <dt>Action:</dt>
 <dd>
   <button class="btn btn-primary" id="myBtn">Modifier la voiture</button>
@@ -44,26 +43,16 @@
         	<div class="form-group">
         	  	<label class="form-check-label">Date de Location : </label>
             	<div class="col-md-12">
-                	<input id="isDateLocation" class="form-control" type="text" value="<?= $voiture->GetDateLocation() ?>" name="DateLocationValue" required="" maxlength="20" /><br>
+                	<input id="isDateLocation" class="form-control" type="date" value="<?= $voiture->GetDateLocation() ?>" name="DateLocationValue" required="" maxlength="20" /><br>
             	</div>
         	</div>
         	<!-- DATE DE RETOUR -->
         	<div class="form-group">
         	  	<label class="form-check-label">Date de retour : </label>
             	<div class="col-md-12">
-                	<input id="isDateRetour" class="form-control" type="text" value="<?= $voiture->GetDateRetour() ?>" name="DateDeRetourValue" required="" maxlength="20" /><br>
+                	<input id="isDateRetour" class="form-control" type="date" value="<?= $voiture->GetDateRetour() ?>" name="DateDeRetourValue" required="" maxlength="20" /><br>
             	</div>
         	</div>
-
-        <!-- ADMIN -->
-  			<div class="form-group">
-          <label class="form-check-label">Admin : </label>
-          <input id="isAdmin" value="<?= $isAdmin = ($membre->getAdmin() > 0) ? "Oui" : "Non" ?>" readonly></input>
-          <button type="button" class="btn btn-primary" onclick="updateStatut('<?php echo $isAdmin; ?>', 'isAdmin')">
-            Activer/Désactiver
-          </button><br>
-  			</div>
-
 
         <!-- ACTIF -->
   			<div class="form-group">
