@@ -7,6 +7,7 @@ $(document).ready(function()
 {
     $("#submitVoiture").click(function(event)
     {
+        console.log(" je rentre dedans");
         // Assigner les valeurs des attributs provenant d'un formulaire PHP dans des variables JVS 
         // dans ce cas çi est nécessaire car nous sommes dans du JVS.
         //
@@ -16,12 +17,17 @@ $(document).ready(function()
         // dans des variables JVS contrairement à la méthode GET qui permet à du javascript 
         // de récupérer directement les valeurs provenant d'un formulaire PHP
         var marque = $("#isMarque").val();
+        console.log(marque);
         var modele = $("#isModele").val();
+        console.log(modele);
         var couleur = $("#isCouleur").val();
+        console.log(couleur);
         var date_location = $("#isDateLocation").val();
+        console.log(date_location);
         var date_retour = $("#isDateRetour").val();
+        console.log(date_retour);
         var actif = $("#isActif").val();
-
+        console.log(actif);
         event.preventDefault();
 
         // POST contient en paramètre (la destination, les attributs et une méthode de retour)
@@ -58,8 +64,3 @@ $(document).ready(function()
 
 
 // Fonction JVS pour changer l'état d'une valeur dans un input (paragraphes, etc... exclus)
-function updateStatut(valuePhp = 'null', idElement = null) 
-{
-	var temp = valuePhp == "Oui" ? "Non" : "Oui";
-	document.getElementById(idElement).value = temp;
-}

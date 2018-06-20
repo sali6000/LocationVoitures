@@ -29,7 +29,7 @@
       <div class="form-group">
         <label class="form-check-label">Modele : </label>
         <div class="col-md-12">
-          <input id="isModel" class="form-control" type="text" value="<?= $voiture->GetModele() ?>" name="modeleValue" required="" maxlength="20" /><br>
+          <input id="isModele" class="form-control" type="text" value="<?= $voiture->GetModele() ?>" name="modeleValue" required="" maxlength="20" /><br>
         </div>
       </div>
 

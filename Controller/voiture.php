@@ -6,6 +6,7 @@
 	// --------------------------- CONTROLLER (IF) -------------------------- //
 
 	// READ MEMBER BY ID
+	die();
 	if(isset($_POST['readId']))
 	{
 		// On modifie le titre du site
@@ -21,7 +22,7 @@
 		require '../view/voitureDetail.php';
 		require '../view/bas.php';
 	}
-	// UPDATE MEMBER (GETTER BY ID)
+	// UPDATE voiture (GETTER BY ID)
 	else if(isset($_POST['getUpdateId']))
 	{
 		// On modifie le titre du site
@@ -32,12 +33,12 @@
 		// On passe le model à la vue
 		require ('../model/voitureDB.php');
 		// On crée l'objet utilisateur sur base du model et on lui donne les données de la DB
-		$voiture = VoitureGetById($_POST['getUpdateId']); // (return new utilisateur(); avec les infos)
+		$voiture = VoitureGetById($_POST['getUpdateId']); // (return new VOITURE(); avec les infos)
 		// On affiche la vue page2Detail.php avec les détails concernant l'objet
 		require '../view/voitureUpdate.php';
 		require '../view/bas.php';
 	}
-	// UPDATE MEMBER (SETTER)
+	// UPDATE VOITURE (SETTER)
 	else if(isset($_POST['marque']) && isset($_POST['modele']) && isset($_POST['couleur']))
 	{
 		$test = new model();
@@ -46,17 +47,18 @@
 			$_POST['modele'], 
 			$_POST['couleur'], 
 			$_POST['date_location'],
-			$_POST['date_retour']);  			
+			$_POST['date_retour']);  
+
 		echo 'Success';
 	}
-	// READ MEMBERS
+	// READ VOITURES
 	else
 	{
 		$Montitle = 'Lecture des voiture';
 		require '../view/haut.php' ;
 		require '../model/voiture.php';
 		require '../model/voitureDB.php';
-		// On affiche les membres
+		// On affiche les voitures
 		$voiture = VoitureGetList();
 		require '../view/voitureList.php';
 		require '../view/bas.php';
