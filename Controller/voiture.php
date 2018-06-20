@@ -6,7 +6,7 @@
 	// --------------------------- CONTROLLER (IF) -------------------------- //
 
 	// READ MEMBER BY ID
-	die();
+
 	if(isset($_POST['readId']))
 	{
 		// On modifie le titre du site
