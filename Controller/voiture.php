@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 	// Options requises :
 	require 'core.php';
 
@@ -42,12 +42,12 @@
 	{
 		$test = new model();
 		$test->callStockVoiture(
-			$_POST['marque'], 
-			$_POST['modele'], 
-			$_POST['couleur'], 
-			$_POST['date_location'],
-			$_POST['date_retour']);  
-			
+			(int)$_POST['id'],
+			$_POST['marque'],
+			$_POST['modele'],
+			$_POST['couleur'],
+			(int)$_POST['date_location'],
+			(int)$_POST['date_retour']);
 		echo 'Success';
 	}
 	// READ VOITURES
@@ -68,12 +68,12 @@
 	// FUNCTION GET MEMBER BY ID
     function VoitureGetById($id)
     {
-		// On ouvre la connection à la base de donnée, 
+		// On ouvre la connection à la base de donnée,
 		// on intègre le model dans le controller pour qu'il sois accessible depuis la vue
 		// et on transforme la variable $user en un objet du type voulus (return new exemple();)
 		$voitureDatas = new voitureDB();
 
-		// On assigne $_POST['readId'] à la propriété id appartenant à l'objet $Utilisateurs 
+		// On assigne $_POST['readId'] à la propriété id appartenant à l'objet $Utilisateurs
 		$voitureDatas->id = $id;
 
 		// On récupère toute les informations concernant l'id  dans la base de donnée
@@ -110,7 +110,7 @@
 		{
 			$voitureObjectList[$j] = new Voiture($d->voitureID,$d->marque,$d->modele,$d->couleur,$d->date_location,$d->date_retour,$d->actif);
 			$j = $j+1;
-		} 
+		}
 
 		// On retourne la List de Membres
 		return $voitureObjectList;

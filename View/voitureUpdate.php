@@ -3,6 +3,12 @@
   <button class="btn btn-primary" id="myBtn">Modifier la voiture</button>
 </dd>
 
+<?php
+
+$IdCar = $voiture->GetVoitureId();
+
+?>
+
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
@@ -16,6 +22,13 @@
       <!-- DEBUT DE FORMULAIRE -->
       <!-- AFICHAGE DU RESULTAT DE LA REQUETE JQUERY -->
       <p id="resultatVoiture"></p>
+
+      <div class="form-group">
+        <label class="form-check-label"> Identificateur : </label>
+        <div class="col-md-12">
+          <input id="isId" class="form-control" type="text" value="<?= $voiture->GetVoitureId() ?>" name="idValue" required="" maxlength="20" /><br>
+        </div>
+      </div>
 
       <!-- MARQUE -->
       <div class="form-group">
