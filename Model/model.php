@@ -102,6 +102,7 @@ class Model{
 			$statement->bindValue('emp3', $c);
 			$statement->bindValue('emp4', $d);
 			$statement->bindValue('emp5', $e);
+			$statement->bindValue('emp6', $f);
 			
 			// On met en forme la requête dans la variable $select
 			$result = $statement->execute();
