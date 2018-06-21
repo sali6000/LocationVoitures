@@ -6,7 +6,6 @@
 	// --------------------------- CONTROLLER (IF) -------------------------- //
 
 	// READ MEMBER BY ID
-
 	if(isset($_POST['readId']))
 	{
 		// On modifie le titre du site
@@ -48,7 +47,7 @@
 			$_POST['couleur'], 
 			$_POST['date_location'],
 			$_POST['date_retour']);  
-
+			
 		echo 'Success';
 	}
 	// READ VOITURES
