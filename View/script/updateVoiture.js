@@ -7,7 +7,6 @@ $(document).ready(function()
 {
     $("#submitVoiture").click(function(event)
     {
-        console.log(" je rentre dedans");
         // Assigner les valeurs des attributs provenant d'un formulaire PHP dans des variables JVS
         // dans ce cas çi est nécessaire car nous sommes dans du JVS.
         //
@@ -60,10 +59,17 @@ $(document).ready(function()
                      $("#resultatVoiture").html("<br><div class=\"alert alert-danger\" align=\"center\">Une erreur est survenue, vous allez être redirigé...</div>");
                 }
             },
+
             'text'
          );
     });
 });
-
+$('#buttonActif').click(function(){
+    var statutActif = ($("#isActif").val() == "Oui")? "Non" : "Oui";
+    $('#isActif').val(statutActif);
+    $('#isActif').text(statutActif);
+    var setUnsetActif = (statutActif == "Oui")? "Désactiver" : "Activer";
+    $('#buttonActif').text(setUnsetActif);
+});
 
 // Fonction JVS pour changer l'état d'une valeur dans un input (paragraphes, etc... exclus)

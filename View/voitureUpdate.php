@@ -26,7 +26,7 @@ $IdCar = $voiture->GetVoitureId();
       <div class="form-group">
         <label class="form-check-label"> Identificateur : </label>
         <div class="col-md-12">
-          <input id="isId" class="form-control" type="text" value="<?= $voiture->GetVoitureId() ?>" name="idValue" required="" maxlength="20" /><br>
+          <input id="isId" class="form-control" type="text" value="<?= $voiture->GetVoitureId() ?>" name="idValue" required="" maxlength="20" readonly /><br>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ $IdCar = $voiture->GetVoitureId();
       <div class="form-group">
         <label class="form-check-label">Actif : </label>
         <input id="isActif" value="<?= $isActif = ($voiture->GetActif() > 0) ? "Oui" : "Non" ?>" readonly></input>
-        <button type="button" id="button" class="btn btn-primary" onclick="updateStatut('<?php echo $isActif; ?>', 'isActif')">Activer/Désactiver
+        <button type="button" id="buttonActif" class="btn btn-primary" onclick="updateStatut('<?php echo $isActif; ?>', 'isActif')">Activer/Désactiver
         </button><br>
       </div>
 
@@ -95,6 +95,7 @@ $IdCar = $voiture->GetVoitureId();
 
 </div>
 
+<!-- SCRIPT JS --->
 <script src="../view/script/showModal.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="../view/script/updateVoiture.js" type="text/javascript" charset="utf-8" async defer></script>
-<script src="../view/script/redirection.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="../view/script/redirectionVoiture.js" type="text/javascript" charset="utf-8" async defer></script>

@@ -88,7 +88,6 @@
   </div>
 </div>
 
-<!-- SCRIPT JS --->
 <script src="../view/script/showModal.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="../view/script/updateMember.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="../view/script/redirection.js" type="text/javascript" charset="utf-8" async defer></script>
