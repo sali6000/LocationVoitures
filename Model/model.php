@@ -95,7 +95,7 @@ class Model{
 	}
 	public function callStockVoiture($a,$b,$c,$d,$e,$f)
 	{
-			$query = "CALL updateCar(:emp1,:emp2,:emp3,:emp4,:emp5);";
+			$query = "CALL updateCar(:emp1,:emp2,:emp3,:emp4,:emp5,:emp6);";
 			$statement = $this->connection->prepare($query);
 			$statement->bindValue('emp1', $a);
 			$statement->bindValue('emp2', $b);
