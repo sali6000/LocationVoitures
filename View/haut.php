@@ -12,7 +12,7 @@
 	<nav class="navbar navbar-inverse" id="haut">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="../controller/voiture.php">Location de voitures</a>
+				<a class="navbar-brand" href="../controller/index.php">Location de voitures</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="../controller/voiture.php">Voitures</a></li>

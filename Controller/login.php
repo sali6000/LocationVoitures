@@ -13,7 +13,7 @@ $Montitle = 'Se connecter';
             {
                 $_SESSION['UTILISATEUR_OK'] = $member;
                 require '../view/haut.php';
-                header('refresh:2;url=../controller/voiture.php');
+                header('refresh:2;url=../controller/index.php');
                 echo '<div id="background"><div id="blanc" style="height: 100px;"></div><div id="margins"><div id="recherche" ><h3 class="alert alert-succes" align="center">Bonjour '.$_POST['Pseudo'].' ! Vous allez être redirigé...</h3></div></div></div>';
             }
             else
