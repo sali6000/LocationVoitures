@@ -93,7 +93,7 @@ class Model{
 			// On met en forme la requête dans la variable $select
 			$result = $statement->execute();
 	}
-	public function callStockVoiuture($a,$b,$c,$d,$e,$f)
+	public function callStockVoiture($a,$b,$c,$d,$e,$f)
 	{
 			$query = "CALL updateCar(:emp1,:emp2,:emp3,:emp4,:emp5);";
 			$statement = $this->connection->prepare($query);
