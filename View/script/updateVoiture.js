@@ -67,3 +67,10 @@ $(document).ready(function()
 
 
 // Fonction JVS pour changer l'état d'une valeur dans un input (paragraphes, etc... exclus)
+$('#buttonActif').click(function(){
+    var statutActif = ($("#isActif").val() == "Oui")? "Non" : "Oui";
+    $('#isActif').val(statutActif);
+    $('#isActif').text(statutActif);
+    var setUnsetActif = (statutActif == "Oui")? "Désactiver" : "Activer";
+    $('#buttonActif').text(setUnsetActif);
+});
