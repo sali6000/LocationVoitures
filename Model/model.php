@@ -2,31 +2,31 @@
 class Model{
 	Public $table;
 	private $connection;
-	
-	function __construct() 
+
+	function __construct()
 	{
-		
-		try 
+
+		try
 		{
 		  // Paramètres de configuration pour la connection à la DB
 		  $dns = 'mysql:host=127.0.0.1;dbname=locavoitures';
 		  $utilisateur = "root";
 		  $motDePasse = '';
-		 
+
 		  // Options de connection
 		  $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
-		 
+
 		  // Initialisation de la connection
 		  $this->connection = new PDO( $dns, $utilisateur, $motDePasse, $options );
-		} 
-		catch ( Exception $e ) 
+		}
+		catch ( Exception $e )
 		{
 		  echo "Connection à la base de donnée impossible car : ", $e->getMessage();
 		  die();
 		}
 	}
 
-	// Cette fonction permet de renvoyé un objet dans la propriété $data, 
+	// Cette fonction permet de renvoyé un objet dans la propriété $data,
 	// avec en paramètre les colonnes souhaitées
 	public function read($fields=null)
 	{
@@ -47,13 +47,13 @@ class Model{
 		{
 			$sql= 'SELECT '.$fields.' from '.$this->table .'  where '.$this->PK.' = \''.$this->id.'\'' ;
 		}
-		
+
 		// Intercepter le message d'erreur si il y en a un
-		try 
+		try
 		{
 		  	// On met en forme la requête dans la variable $select
 		  	$select = $this->connection->query($sql);
-		 
+
 		  	// On prépare la manière dont la requête va être recupérée
 			$select->setFetchMode(PDO::FETCH_OBJ); // Dans ce cas çi ce seras en tant qu'objet
 
@@ -62,17 +62,17 @@ class Model{
 
 			// On execute la requête
 			$this->data = $select->fetchall();
-		} 
-		catch ( Exception $e ) 
+		}
+		catch ( Exception $e )
 		{
 		  echo 'Une erreur est survenue lors de la récupération des créateurs';
 		}
 	}
-	
+
 	// Cette fonction permet de renvoyé une vue avec le model associé
 	static function load($name)
 	{
-		// Affiche un accès à un model dans dans le controller 
+		// Affiche un accès à un model dans dans le controller
 		// (accessible depuis les vues appellées dans le controller)
 		require ('../model/'.$name.'.php');
 
@@ -102,7 +102,7 @@ class Model{
 			$statement->bindValue('emp3', $c);
 			$statement->bindValue('emp4', $d);
 			$statement->bindValue('emp5', $e);
-			
+
 			// On met en forme la requête dans la variable $select
 			$result = $statement->execute();
 	}
