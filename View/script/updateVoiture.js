@@ -35,7 +35,7 @@ $(document).ready(function()
         $.post(
             '#', // La destination du POST
             {
-                // Nous créons les attributs; ex: $_POST('utilisateur') avec les valeurs
+                // Nous créons les attributs; ex: $_POST('marque') avec les valeurs
                 // qu'ils doivent contenir
 
                 marque : marque,

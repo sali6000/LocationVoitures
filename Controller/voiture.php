@@ -5,7 +5,7 @@
 
 	// --------------------------- CONTROLLER (IF) -------------------------- //
 
-	// READ MEMBER BY ID
+	// READ VOITURE BY ID
 	if(isset($_POST['readId']))
 	{
 		// On modifie le titre du site
@@ -15,9 +15,9 @@
 		require ('../model/voiture.php');
 		// On passe le model à la vue
 		require ('../model/voitureDB.php');
-		// On crée l'objet utilisateur sur base du model et on lui donne les données de la DB
+		// On crée l'objet voiture sur base du model et on lui donne les données de la DB
 		$voiture = VoitureGetById($_POST['readId']); // (return new utilisateur(); avec les infos)
-		// On affiche la vue page2Detail.php avec les détails concernant l'objet
+		// On affiche la vue voitureDetail.php avec les détails concernant l'objet
 		require '../view/voitureDetail.php';
 		require '../view/bas.php';
 	}
@@ -31,9 +31,9 @@
 		require ('../model/voiture.php');
 		// On passe le model à la vue
 		require ('../model/voitureDB.php');
-		// On crée l'objet utilisateur sur base du model et on lui donne les données de la DB
+		// On crée l'objet voiture sur base du model et on lui donne les données de la DB
 		$voiture = VoitureGetById($_POST['getUpdateId']); // (return new VOITURE(); avec les infos)
-		// On affiche la vue page2Detail.php avec les détails concernant l'objet
+		// On affiche la vue voitureDetail.php avec les détails concernant l'objet
 		require '../view/voitureUpdate.php';
 		require '../view/bas.php';
 	}
@@ -65,19 +65,19 @@
 
 	// -------------------------- METHODES ---------------------------//
 
-	// FUNCTION GET MEMBER BY ID
+	// FUNCTION GET VOITURE BY ID
     function VoitureGetById($id)
     {
 		// On ouvre la connection à la base de donnée,
 		// on intègre le model dans le controller pour qu'il sois accessible depuis la vue
-		// et on transforme la variable $user en un objet du type voulus (return new exemple();)
+		// et on transforme la variable $voiture en un objet du type voulus (return new exemple();)
 		$voitureDatas = new voitureDB();
 
 		// On assigne $_POST['readId'] à la propriété id appartenant à l'objet $Utilisateurs
 		$voitureDatas->id = $id;
 
 		// On récupère toute les informations concernant l'id  dans la base de donnée
-		// et on insère le contenu récupéré dans l'objet $userObject
+		// et on insère le contenu récupéré dans l'objet $voitureObject
 		$voitureDatas->read();
 		$voitureObject = new voiture(
 			$voitureDatas->data[0]->voitureID,
@@ -88,23 +88,23 @@
 			$voitureDatas->data[0]->date_retour,
 			$voitureDatas->data[0]->actif);
 
-		// On retourne l'objet utilisateur
+		// On retourne l'objet voiture
 		return $voitureObject;
     }
 
-    // FUNCTION GET LIST MEMBERS
+    // FUNCTION GET LIST Voiuture
     function VoitureGetList()
     {
 
     	$voiture = new voitureDB();
 
-    	// On récupère toute les informations concernant tous les utilisateurs dans la base de donnée
+    	// On récupère toute les informations concernant toutes les voitures dans la base de donnée
 		$voiture->read();
 
 		// On crée une List vide
 		$voitureObjectList = [];
 
-		// On parcours la List à l'aide d'un compteur pour y ajouté des Membre
+		// On parcours la List à l'aide d'un compteur pour y ajouté des voitures
 		$j = 0;
 		foreach($voiture->data as $d)
 		{
@@ -112,6 +112,6 @@
 			$j = $j+1;
 		}
 
-		// On retourne la List de Membres
+		// On retourne la List de Voitures
 		return $voitureObjectList;
     }
