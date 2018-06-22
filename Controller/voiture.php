@@ -16,7 +16,7 @@
 		// On passe le model à la vue
 		require ('../model/voitureDB.php');
 		// On crée l'objet voiture sur base du model et on lui donne les données de la DB
-		$voiture = VoitureGetById($_POST['readId']); // (return new utilisateur(); avec les infos)
+		$voiture = VoitureGetById($_POST['readId']); // (return new voitture(); avec les infos)
 		// On affiche la vue voitureDetail.php avec les détails concernant l'objet
 		require '../view/voitureDetail.php';
 		require '../view/bas.php';
@@ -73,7 +73,7 @@
 		// et on transforme la variable $voiture en un objet du type voulus (return new exemple();)
 		$voitureDatas = new voitureDB();
 
-		// On assigne $_POST['readId'] à la propriété id appartenant à l'objet $Utilisateurs
+		// On assigne $_POST['readId'] à la propriété id appartenant à l'objet $voiture
 		$voitureDatas->id = $id;
 
 		// On récupère toute les informations concernant l'id  dans la base de donnée
