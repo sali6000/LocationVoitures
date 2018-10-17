@@ -20,7 +20,7 @@ $Montitle = 'Se connecter';
             {
                 require '../view/haut.php';
                 require '../view/login.php';
-                echo '<br><div class="alert alert-danger" align="center"> Votre pseudo ou le mot de passe est mauvais !</div>';
+                echo '<br><div class="alert alert-danger" align="center">Votre pseudo ou le mot de passe est mauvais !</div>';
             }
     }
     else
